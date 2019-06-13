@@ -1,0 +1,12 @@
+{
+  "name": "emoji-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/scottgirouard/emoji-app.git",
+  "author": "Scott Girouard",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  }
+}
