@@ -1,3 +1,5 @@
+import React from 'react';
+
 const CSVToJSON = require('csvtojson');
 const JSONToCSV = require('json2csv').parse;
 const fs = require('fs');
