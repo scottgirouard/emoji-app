@@ -1,12 +1,19 @@
 'use strict';
 
+var CSVToJSON = require('csvtojson');
+var JSONToCSV = require('json2csv').parse;
+var fs = require('fs');
+
+CSVToJSON().fromFile('./emojis.csv').then(function (emojis) {
+    console.log(emojis);
+
+    var csv = JSONToCSV(emojis, { categories: ["emoji", "english", "arabic"] });
+    fs.writeFileSync("./output.csv", csv);
+});
+
 console.log('app.js is running');
 
-var template = React.createElement(
-  'p',
-  null,
-  'emoji TESTing!!'
-);
-var appRoot = document.getElementById('app');
+// var template = <p>emoji TESTing!!</p>;
+// var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+// ReactDOM.render(template, appRoot);
